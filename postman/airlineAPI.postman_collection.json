@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "2b716e88-a3a6-43fe-b5f1-e37fdaaf3ba5",
+		"name": "airlineAPI",
+		"description": "airlineAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get: Obtener aerolineas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/airlines",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"airlines"
+					]
+				},
+				"description": "get: Obtener aerolineas"
+			},
+			"response": []
+		},
+		{
+			"name": "get: Obtener una aerolinea",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/airline/605a1ca47ac7166cffcc4848",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"airline",
+						"605a1ca47ac7166cffcc4848"
+					]
+				},
+				"description": "get: Obtener una aerolinea"
+			},
+			"response": []
+		},
+		{
+			"name": "post: crear aerolinea",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \" airline 5\",\n    \"country\": \"canada\",\n    \"type\": \"\",\n    \"number\": \"4569\",\n    \"depart_city\": \"new york\",\n    \"arrive_city\": \"LA\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/airlines",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"airlines"
+					]
+				},
+				"description": "post: crear aerolinea"
+			},
+			"response": []
+		},
+		{
+			"name": "delete: borrar una aerolinea",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/airline/605a21b691cb7f0015dc4668",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"airline",
+						"605a21b691cb7f0015dc4668"
+					]
+				},
+				"description": "delete: borrar una aerolinea"
+			},
+			"response": []
+		}
+	]
+}
